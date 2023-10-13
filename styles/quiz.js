@@ -58,7 +58,7 @@ const questions = [
         optionA: "<script>",
         optionB: "<link>",
         optionC: "<nav>",
-        optionD: "<style>t",
+        optionD: "<style>",
         correctOption: "optionD"
     },
 
