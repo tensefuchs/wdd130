@@ -1,76 +1,64 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
+
 <head>
-  <link rel="stylesheet" href="quiz.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This page is an HTML and CSS Quiz">
+    <meta name="author" content="Tense Fuchs">
+    <link rel="stylesheet" href="./styles/quiz.css">
+    <title>HTML CSS Quiz</title>
 </head>
-<body onload="NextQuestion(0)">
+
+<body>
+    <header>
+        <nav>
+            <a href="#">Home</a>
+            <a href="wwr/">Rafting Website</a>
+            <a href="wwr/site-plan-rafting.html">Rafting Siteplan</a>
+            <a href="https://www.linkedin.com/in/supa-anan-fuchs-220138216/" target="_blank">Linkedin</a>
+            <a href="https://www.facebook.com/guggachgirl/" target="_blank">Facebook</a>
+        </nav>
+    </header>
+
+
     <main>
-        <div class="modal-container" id="score-modal">
-             <div class="modal-content-container">
-                <h1>Congratulations, Quiz Completed.</h1>
-                <div class="grade-details">
-                    <p>Attempts : 10</p>
-                    <p>Wrong Answers : <span id="wrong-answers"></span></p>
-                    <p>Right Answers : <span id="right-answers"></span></p>
-                    <p>Grade : <span id="grade-percentage"></span>%</p>
-                    <p ><span id="remarks"></span></p>
-                </div>
+        <div class="grid">
+            <h1><span class="checkmark">✓</span> Basic HTML and CSS quiz</h1>
 
-                <div class="modal-button-container">
-                    <button onclick="closeScoreModal()">Continue</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="game-quiz-container">
-            <div class="game-details-container">
-                <h1>Score : <span id="player-score"></span> / 10</h1>
-                <h1> Question : <span id="question-number"></span> / 10</h1>
-            </div>
-
-            <div class="game-question-container">
-                <h1 id="display-question"></h1>
-            </div>
-
-            <div class="game-options-container">
-
-               <div class="modal-container" id="option-modal">
-
-                    <div class="modal-content-container">
-                         <h1>Please Pick An Option</h1>
-
-                         <div class="modal-button-container">
-                            <button onclick="closeOptionModal()">Continue</button>
-                        </div>
-                    </div>
-                </div>
-
-                <span>
-                    <input type="radio" id="option-one" name="option" class="radio" value="optionA" />
-                    <label for="option-one" class="option" id="option-one-label"></label>
-                </span>
-                
-                <span>
-                    <input type="radio" id="option-two" name="option" class="radio" value="optionB" />
-                    <label for="option-two" class="option" id="option-two-label"></label>
-                </span>
-                
-                <span>
-                    <input type="radio" id="option-three" name="option" class="radio" value="optionC" />
-                    <label for="option-three" class="option" id="option-three-label"></label>
-                </span>
-                
-                <span>
-                    <input type="radio" id="option-four" name="option" class="radio" value="optionD" />
-                    <label for="option-four" class="option" id="option-four-label"></label>
-                </span>
-            </div>
-
-            <div class="next-button-container">
-                <button onclick="handleNextQuestion()">Next Question</button>
-            </div>
+            <form class="quiz">
+                <label for="q1">1. What does the acronym CSS stand for?</label>
+                <input type="text" name="q1" id="q1">
+                <br>
+                <label for="q2">2. How are id and class attributes selected in CSS?</label>
+                <textarea name="q2" id="q2" cols="30" rows="10"></textarea>
+                <br>
+                <label for="q3">3. Which of the following is a valid CSS comment?</label>
+                <select name="q3" id="q3">
+                    <option value="" selected disabled>Choose one ...</option>
+                    <option value="1">/* This is a valid comment */</option>
+                    <option value="2">// This is a valid comment //</option>
+                    <option value="3"># This is a valid comment #</option>
+                </select>
+                <br>
+                <label for="q4">4. What is the bottom margin given this declaration?</label>
+                <span class="code">margin: 10px 5px 15px;</span>
+                <br>
+                <input type="number" name="q4" id="q4">
+                <br>
+                <button type="submit">Submit Quiz</button>
+            </form>
+            <br>
 
         </div>
+
     </main>
-    <script src="quiz.js"></script>
+
+    <footer>
+        <p>
+            ©️ 2023 Tense Fuchs - Building websites with <span class="heart">♡</span> from Bangkok,
+            Thailand
+        </p>
+    </footer>
 </body>
+</html>
