@@ -1,5 +1,318 @@
-.hero img {
-    display: block;
-width: 100%;
-height: auto;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+:root {
+  --primary-color: #25CED1;
+  --secondary-color: #FCEADE;
+  --accent1-color: #EA526F;
+  --accent2-color: #ff8a5b;
+
+  --heading-font: 'Rock Salt', serif;
+  --paragraph-font: 'Roboto', serif;
+
+  --nav-background-color: #25CED1;
+  --nav-link-color: #fff;
+  --nav-hover-link-color: #FCEADE;
+  --nav-hover-background-color: #ff8a5b;
+  ;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--paragraph-font);
+  padding: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
+/*HEADER AND NAVBAR SECCTION*/
+.aboutHeader {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  align-items: center;
+  background-color: var(--nav-background-color);
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  padding: 22px;
+  grid-gap: 20px;
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+
+.logo {
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 1px solid black;
+  width: 150px;
+  height: auto;
+}
+
+.aboutNavbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: auto;
+  padding: 0px;
+  margin: 0;
+  background-color: var(--nav-hover-link-color);
+  border: 1px solid black;
+}
+
+.aboutNavbar a {
+  text-decoration: none;
+  color: var(--primary-color);
+  padding: 16px 32px;
+  margin: 0;
+  border-right: 1px solid black;
+}
+
+.aboutNavbar a:last-child {
+  border-right: none;
+}
+
+.aboutNavbar a:hover {
+  background-color: var(--accent1-color);
+  color: var(--nav-link-color);
+}
+
+
+/*HERO SECCTION*/
+.hero {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 0;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  position: absolute;
+  top: 2%;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  font-family: var(--heading-font);
+  font-size: 36px;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.hero>.moto {
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 8%;
+  background-color: var(--nav-background-color);
+  padding: 12px;
+  opacity: 0.9;
+}
+
+.hero>.moto p {
+  color: #fff;
+  font-family: var(--paragraph-font);
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  padding: 8px;
+}
+
+.hero>.moto img {
+  float: right;
+  height: 180px;
+}
+
+
+/*HISTORY SECCTION*/
+.history,
+.contact {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+
+.history h2 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.historyContent {
+  display: grid;
+  grid-template-columns: 1fr 20% 1fr;
+  gap: 10px;
+}
+
+.historyContent p {
+  text-align: left;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  padding: 8px;
+}
+
+.historyContent img {
+  max-width: 100%;
+  max-height: 220px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  padding: 8px;
+}
+
+/*ADVENTURES SECCTION*/
+.adventures {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+
+.adventures h2 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+figure {
+  flex: 1;
+  text-align: center;
+  margin: 0;
+}
+
+figure img {
+  max-width: 100%;
+  height: 120px;
+  display: block;
+  margin: 0 auto;
+}
+
+figcaption {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+
+/*CONTACT US PAGE STYLES*/
+.contactContent {
+  display: grid;
+  grid-template-columns: 1fr 50%;
+  gap: 10px;
+  text-align: left !important;
+  line-height: 2rem;
+  margin-top: 12px;
+}
+
+.contactContent h2 {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 18px;
+}
+
+.contactContent img {
+  width: 350px;
+  height: auto;
+}
+
+.contactContent label,
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  padding: 6px;
+  width: 90%;
+  font-weight: bold;
+}
+
+.radio-group {
+  display: block;
+  gap: 5px;
+  align-items: left;
+}
+
+
+.radio-group input[type="radio"] {
+  margin: 0;
+  padding: 2px;
+  appearance: none;
+  border: 1px solid #3498db;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.radio-group label {
+  font-size: 16px;
+  color: #333;
+}
+
+.radio-group input[type="radio"]:checked {
+  background-color: #3498db;
+}
+
+
+.contactContent button {
+  background-color: #000080;
+  color: #fff;
+  padding: 14px 22px;
+  border: none;
+  border-radius: 8px;
+  margin: 0 auto;
+  width: 90%;
+  cursor: pointer;
+}
+
+
+/*FOOTER SECCTION*/
+footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 10px;
+  border: 1px solid black;
+}
+
+footer p {
+  flex: 1;
+  margin: 0;
+}
+
+.sociallinks {
+  display: flex;
+  gap: 10px;
+}
+
+.sociallinks a {
+  text-decoration: none;
+}
+
+.sociallinks img {
+  width: 30px;
+  height: auto;
 }
